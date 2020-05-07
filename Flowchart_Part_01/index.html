@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Flowchart Part-01</title>
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body ondragenter="return false" ondragover="return false">
+
+
+<div id="secFlowChart">
+  <div id="hiddenRed"></div>
+  <div class="redBorder"></div>
+</div>
+
+
+
+<div class="container" id="inits">
+  <div style="margin-left:100px;margin-top:203px;">
+     <div class="dropArea" id="drop0" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+
+  <div style="margin-left:235px;margin-top:-40px;">
+     <div class="dropArea" id="drop1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+  
+   <div style="margin-left:235px;margin-top:50px;">
+     <div class="dropArea" id="drop2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+  
+ 
+  
+  <div style="margin-left:235px;margin-top:50px;">
+     <div class="dropArea" id="drop3" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+  
+   <div style="margin-left:420px;margin-top:-136px;">
+     <div class="dropArea" id="drop4" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+  
+   <div style="margin-left:420px;margin-top:50px;">
+     <div class="dropArea" id="drop5" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+  
+  <div style="margin-left:545px;margin-top:-205px;">
+     <div class="dropArea" id="drop6" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+  
+  <div style="margin-left:675px;margin-top:-43px;">
+     <div class="dropArea" id="drop7" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+  
+  
+  
+  <div style="margin-left:675px;margin-top:60px;">
+     <div class="dropArea" id="drop8" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">Drop area</div>
+  </div>
+  
+
+  
+  
+  
+  
+
+</div>
+
+<div class="contentArea" id="popVisible">
+  <div class="popPatch"></div>
+    
+  <div class="outerLayer">
+    <div class="instruct">
+        <div class="penicon"></div>
+        <div><b>Objective:</b></div>
+    </div>
+    <div class="instruct">Complete a flow chart to document your understanding of a SCOT.</div>
+    <div class="instruct"><div class="penicon"></div><b>Time:</b></div>	
+    <div class="instruct">15 minutes</div>
+    <div class="instruct"><div class="penicon"></div><b>Instructions:</b></div>	
+    <div class="instruct">1. Work in pairs.</div>
+    <div class="instruct">2. As instructed by your senior, complete the flowchart of Summit Equipment’s SCOT
+    for the addition of plant and equipment.</div>
+    <div class="instruct">3. Refer to: <br> PM 4.2: PP&E process narrative, and <br> PM 4.3: PP&E process map.</div>
+    <div class="instruct">4. Use common flowchart symbols, shown in the table on the next page to
+    chart the process.</div>
+    <div class="instruct">5. Compare PM 4.2 to PM 4.3, noting anything that requires further
+    discussion with the senior (if any).</div>
+    <div class="instruct">6. Using the shapes provided, complete the boxed in section of the flowchart.</div>
+    <div class="instruct"><div class="penicon"></div><b>Tips:</b></div>
+    <div class="instruct">Brainstorm and think about the critical path of the SCOT before beginning your final flowchart.</div>
+    <div class="buttonC"  id="letsGo">Let's go</div>
+  </div>
+  <div class="lineMiddle"></div>
+  <div class="indexRight">
+  <div class="flowHead">Common flowchart symbols:</div>
+    <div>
+      <div class="LHS"><div id="tv"></div></div>
+      <div class="RHS"><div style="margin:5px;">This symbol marks the beginning or ending of the process.</div></div>
+    </div>
+    
+    <div>
+      <div class="LHS"><div id="rectangle"></div>Process</div>
+      <div class="RHS"><div style="margin:5px;">This is the most common symbol. It is used for most process steps.</div></div>
+    </div>
+    <div>
+      <div class="LHS"><div id="diamond"></div><div style="margin-top:48px;">Decision Making</div></div>
+      <div class="RHS"><div style="margin:5px;">This symbol represents a decision in the flow chart. Usually an arrow that flows from this symbol is noted as a “Yes” or “No” decision.</div></div>
+    </div>
+    <div>
+      <div class="LHS"><div id="rhombus"></div><div style="margin-top:48px;">Document</div></div>
+      <div class="RHS"><div style="margin:5px;">This symbol represents a document created or prepared as part of the process (e.g., a report).</div></div>
+    </div>
+    <div>
+      <div class="LHS"><div id="cylinder"></div><div style="margin-top:48px;">Storage Device</div></div>
+      <div class="RHS"><div style="margin:5px;">This symbol represents a physical storage device for data such as a hard drive. The focus of this symbol is the media, (i.e., “where to store.”) </div></div>
+    </div>
+    <div>
+      <div class="LHS"><div id="lineArrow"></div></div>
+      <div class="RHS"><div style="margin:5px;">An arrow indicates the direction of the flow.</div></div>
+    </div>
+  </div>
+  
+
+
+<div class="popPatchBelow"></div>
+</div>
+
+<div>
+  <div id="itext">Click the submit button</div>
+  <div class="submitBtn" id="submitB">Submit</div>
+</div>
+
+
+
+<div class="bgTint" id="completedID">
+  <div class="completedC"></div>
+</div>
+
+
+
+<div>
+<div class="loader">
+      <div id="dummyLoader"></div>
+      <div id="LogoRotator" class="varySpeed"></div>
+</div>
+   <div class="timerS" id="time"><span  class="runner_time">15:00</span> </div>
+</div>
+
+<div class="sideSection" id="sideID">
+
+<div style="float:left;">
+    <div class="boxDragDummyBG"></div>
+   <div class="boxDrag1" draggable="true" id="object0" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+   <div class="boxDrag1" draggable="true" id="object1" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+    <div class="boxtext1">Storage Device</div>
+</div>
+<div style="float:left;margin-left:50px;">
+   <div class="boxDragDummyBG2"></div>
+   <div class="boxDrag2" draggable="true" id="object2" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+    <div class="boxDrag2" draggable="true" id="object3" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+    <div class="boxDrag2" draggable="true" id="object4" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+   <div class="boxtext2" style="margin-left:20px;">Process</div>
+</div>
+
+<div style="float:left;margin-left:70px;">
+   <div class="boxDragDummyBG3"></div>
+   <div class="boxDrag3" draggable="true" id="object5" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+   <div class="boxtext3" style="margin-left:0px;">Decision Making</div>
+</div>
+
+<div style="float:left;margin-left:40px;">
+   <div class="boxDragDummyBG4"></div>
+   <div class="boxDrag4" draggable="true" id="object6" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+   <div class="boxDrag4" draggable="true" id="object7" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+   <div class="boxDrag4" draggable="true" id="object8" ondragstart="drag_start(event)" ondragend="drag_end(event)" ondrop="drag_dropText(event)" ondragover="return false"></div>
+
+   <div class="boxtext4" style="margin-left:0px;">Document</div>
+</div>
+
+
+
+</div>
+
+<div class="textDragSection" id="textDragID">
+ 
+<div style="margin-left:80px; margin-top:5px;" > 
+   <div class="TextDragDummy">Vendor Master Data</div>
+   <div class="textDrag" draggable="true" id="text0" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">Vendor Master Data</div>
+</div>
+
+<div style="margin-left:220px; margin-top:5px;" > 
+   <div class="TextDragDummy" style="font-family:Arial, Helvetica, sans-serif;">Purchase Requisition Converted to PO</div>
+   <div class="textDrag" style="font-family:Arial, Helvetica, sans-serif;" draggable="true" id="text1" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">Purchase Requisition Converted to PO</div>
+</div>
+
+<div style="margin-left:350px; margin-top:5px;" > 
+   <div class="TextDragDummy">Approval Email</div>
+   <div class="textDrag" draggable="true" id="text2" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">Approval Email</div>
+</div>
+
+
+<div style="margin-left:80px; margin-top:50px;" > 
+   <div class="TextDragDummy">Purchase Order Sent to the Vendor</div>
+   <div class="textDrag" draggable="true" id="text3" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">Purchase Order Sent to the Vendor</div>
+</div>
+
+<div style="margin-left:220px; margin-top:50px;" > 
+   <div class="TextDragDummy">Order Confirmation Received</div>
+   <div class="textDrag" draggable="true" id="text4" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">Order Confirmation Received</div>
+</div>
+
+<div style="margin-left:350px; margin-top:50px;" > 
+   <div class="TextDragDummy">Order Confirmation in SAP</div>
+   <div class="textDrag" draggable="true" id="text5" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">Order Confirmation in SAP</div>
+</div>
+
+
+<div style="margin-left:80px; margin-top:110px;" > 
+   <div class="TextDragDummy">Is the Purchase Requisition Greater than CHF 500,000?</div>
+   <div class="textDrag" draggable="true" id="text6" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">Is the Purchase Requisition Greater than CHF 500,000?</div>
+</div>
+
+<div style="margin-left:220px; margin-top:110px;" > 
+   <div class="TextDragDummy">PO is changed to “Confirmed”</div>
+   <div class="textDrag" draggable="true" id="text7" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">PO is changed to “Confirmed”</div>
+</div>
+
+<div style="margin-left:350px; margin-top:110px;" > 
+   <div class="TextDragDummy">CFO Approval</div>
+   <div class="textDrag" draggable="true" id="text8" ondragstart="drag_startText(event)" ondragend="drag_endText(event)" ondragover="return false">CFO Approval</div>
+</div>
+    
+
+</div>
+
+
+<div class="topSpace"></div>
+<div class="boxDrop1" ></div>
+<div style="margin-top:120px; margin-left:210px; position:absolute;">    
+     <div class="wrongID" id="w0"></div>
+     <div class="answerID" id="a0"></div>
+</div>
+<div class="SpaceGap2"></div>
+<div class="boxDrop1" ></div>
+<div style="margin-top:108px; margin-left:345px; position:absolute;">    
+     <div class="wrongID" id="w1"></div>
+     <div class="answerID" id="a1"></div>
+</div>
+<div class="SpaceGap3"></div>
+<div class="boxDrop1" ></div>
+<div style="margin-top:190px; margin-left:345px; position:absolute;">    
+     <div class="wrongID" id="w2"></div>
+     <div class="answerID" id="a2"></div>
+</div>
+<div class="SpaceGap4"></div>
+<div class="boxDrop2" ></div>
+<div style="margin-left:345px; margin-top:150px; position:absolute;">    
+     <div class="wrongID" id="w3"></div>
+     <div class="answerID" id="a3"></div>
+</div>
+<div class="SpaceGap5"></div>
+
+  <div class="boxDrop3" ></div>
+  <div style="margin-left:530px;margin-top:8px; position:absolute;">    
+     <div class="wrongID" id="w4"></div>
+     <div class="answerID" id="a4"></div>
+  </div>
+      <div class="boxDrop3 boxDrop4" ></div>
+      <div style="margin-left:530px;margin-top:-80px; position:absolute;">    
+         <div class="wrongID" id="w5"></div>
+         <div class="answerID" id="a5"></div>
+     </div>
+      <div class="boxDrop3 boxDrop5"></div>
+     <div style="margin-left:650px;margin-top:-170px; position:absolute;">    
+         <div class="wrongID" id="w6"></div>
+         <div class="answerID" id="a6"></div>
+     </div>
+     <div class="boxDrop3 boxDrop6"></div>
+       <div style="margin-left:780px;margin-top:-170px; position:absolute;">    
+         <div class="wrongID" id="w7"></div>
+         <div class="answerID" id="a7"></div>
+     </div>
+     
+     
+     
+     
+  </div>
+  
+
+<div class="SpaceGap6"></div>  
+<div class="boxDrop7"></div>
+     <div style="margin-left:780px; margin-top:-250px; position:absolute;">    
+         <div class="wrongID" id="w8"></div>
+         <div class="answerID" id="a8"></div>
+     </div>
+
+
+
+
+<script type="text/javascript" src="js/main.js"	></script>
+</body>
+</html>

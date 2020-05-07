@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Marble Activity - L7</title>
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body class="container">
+<div id="closeBtn">X</div>
+   <div id="timeUpPop">
+      <div class="blacktimeUpPop"></div>
+      <div class="timeupimg"></div>  
+   </div>
+   
+   <div id="completedTask">
+      <div class="blacktimeUpPop"></div>
+      <div class="completedBG">
+        <div class="imageCBG">
+            <div class="leftHand">EY GAM outlines audit procedures to perform to respond to the related assertions for PPE. Note that analytics are often your first step in collecting audit evidence, because the quality of evidence using substantive analytics can be higher than simply defaulting to key item testing and representative sampling. Although the wording in the EY GAM procedures might be slightly different, you can see that you are using your audit tools to perform each of the procedures outlined by GAM.
+</div>
+       <div class="rightHand">
+        <div class="AlignBoth">
+            <b><u>Procedures</u></b></div>
+            <div style="margin-top:85px">
+                <div class="boxLeft"><b><u>Correlate</u></b>PPE activity and Income statemnet account activity</div>
+                <div class="boxLeft"><b><u>Analyze</u></b>gross cost of PPE as a percentage of depreciation expense</div>
+                <div class="boxLeft"><b><u>Insepct</u></b> and <b><u>recalculate</u></b> the company's reconciliation of PPE Subledger accounts to the GL</div>
+                <div class="boxLeft"><b><u>Inspect</u></b> source documentation evidencing the authorization and purchase of the asset</div>
+                <div class="boxLeft"><b><u>Inspect</u></b> the Repairs & Maintenance Accounts for items that were expensed but should have been capitalized.</div>
+                <div class="boxLeft">Correlate<b><u> Physical Observation</u></b> of assets</div>
+            </div>
+        </div>
+        
+        <div class="AlignBoth" style="margin-left:650px;">
+            <b><u>Primary Substantive Procedures</u></b></div>
+            <div style="margin-top:85px; margin-left:648px;">
+                <div class="boxLeft">Correlate the activity between PPE and related income statement accounts</div>
+                <div class="boxLeft">Substantive analytical procedures on gross cost of PPE</div>
+                <div class="boxLeft">Verify the reconciliation of the PPE sub-ledger and general ledger control accounts</div>
+                <div class="boxLeft">Perform substantive procedures on additions of PPE</div>
+                <div class="boxLeft">Review contents of repair & maintenance accounts</div>
+                <div class="boxLeft">Physical verification of assets</div>
+            </div>
+        </div>
+
+        </div>
+        
+        
+      </div>  
+   </div>
+   
+   <div id="popIncorrectDetail">
+        <div class="blackpopIncorrectDetail"></div>
+        <div class="popupImgIncorrect">
+          <div class="instructP2"><b>Try again</b></div>
+          <div class="instructP2"><p style="margin-top:35px;">Your response is incorrect</p></div>
+          <div class="instructP2"><p style="margin-top:60px;">Please try again!</p></div>
+          <div class="buttonC" style="margin-left:450px; margin-top:170px;" id="continue">Continue</div>
+        </div>
+    </div>
+    
+    <div id="popIncorrectConfirm">
+        <div class="blackpopIncorrectConfirm"></div>
+        <div class="popupImgIncorrectConfirm">
+          <div class="instructP2"><b>Incorrect</b></div>
+          <div class="instructP2"><p style="margin-top:35px;">That response is incorrect!</p></div>
+          <div class="instructP2"><p style="margin-top:60px;">Click continue, and then click on each bowl to view the <br> correct answers.</p></div>
+          <div class="buttonC" style="margin-left:450px; margin-top:170px;" id="continueWrong">Continue</div>
+        </div>
+    </div>
+    
+    <div id="popCorrectDetail">
+        <div class="blackpopCorrectDetail"></div>
+        <div class="popupImgCorrect">
+          <div class="instructP2"><b>Correct</b></div>
+          <div class="instructP2"><p style="margin-top:35px;">That response is correct!</p></div>
+          <div class="buttonC" style="margin-left:450px; margin-top:170px;" id="continueCorrect">Continue</div>
+        </div>
+    </div>
+   
+
+    <div id="popDetail">
+        <div class="blackpopDetail"></div>
+        <div class="popupImg">
+          <div class="instruct"><b>Instructions:</b></div>
+          <div class="instruct"><p style="margin-top:25px;">On the bottom row are bowls organized by assertion that need to be addressed by using your set of audit procedures. Drag and drop the assertion into the bowl related to the procedure that addresses it. Note that the procedures can be used to respond to more than one assertion.</p></div>
+          <div class="buttonC"  id="letsGo">Let's go</div>
+        </div>
+    </div>
+    
+     <div id="popDetailCompleted">
+        <div class="blackPatch"></div>
+        <div class="popupImgCompleted"></div>
+    </div>
+    
+    <div id="popExit">
+        <div class="blackpopDetail"></div>
+        <div class="popupImg">
+          <div class="instructExit"><b>Do you really want to quit this activity?</b></div>
+          <div style="margin-left:200px">
+             <div class="buttonExit"  id="yesExit">Yes</div>
+             <div class="buttonExit"  id="NoExit">No</div>
+          </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div id="activityID">
+        <div class="contentArea">
+          <div class="headerP">
+              <div style="margin-left:350px;">
+                  <div class="textBall">Existence</div>
+                  <div>
+                     <div class="ballPicDummy" id="waterMark1" draggable="false"></div>
+                     <div class="ballPic" draggable="true" id="object1" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic" draggable="true" id="object2" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic" draggable="true" id="object3" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic" draggable="true" id="object4" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                  <div class="stripPNG"></div>
+              </div>
+              
+              <div style="margin-left:520px;">
+                  <div class="textBall" style="margin-left:-90px;">Completeness</div>
+                  <div>
+                     <div class="ballPicDummy2" id="waterMark2" draggable="false"></div>
+                     <div class="ballPic2" draggable="true" id="object5" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic2" draggable="true" id="object6" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic2" draggable="true" id="object7" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic2" draggable="true" id="object8" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic2" draggable="true" id="object9" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                  <div class="stripPNG"></div>
+              </div>
+              
+              <div style="margin-left:670px;">
+                  <div class="textBall" style="margin-left:-70px;">Rights & Obligations</div>
+                  <div>
+                     <div class="ballPicDummy3" id="waterMark3" draggable="false"></div>
+                     <div class="ballPic3" draggable="true" id="object10" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                  <div class="stripPNG"></div>
+              </div>
+              
+              <div style="margin-left:820px;">
+                  <div class="textBall" style="margin-left:-70px;" disabled>Valuation</div>
+                  <div>
+                     <div class="ballPicDummy5" id="waterMark4" draggable="false"></div>
+                     <div class="ballPic5" draggable="true" id="object11" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic5" draggable="true" id="object12" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic5" draggable="true" id="object13" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic5" draggable="true" id="object14" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic5" draggable="true" id="object15" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic5" draggable="true" id="object16" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                  <div class="stripPNG"></div>
+              </div>
+              
+              <div style="margin-left:990px;">
+                  <div class="textBall" style="margin-left:-90px;" disabled>Presentation & Disclosure</div>
+                  <div>
+                     <div class="ballPicDummy4" id="waterMark5" draggable="false"></div>
+                       <div class="ballPic4" draggable="true" id="object17" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+              </div>
+           </div>  
+           
+           
+           <div class="bodyArea">
+            <div style="margin-left:200px;">
+             <div class="bowlStand">
+                  <div class="circle" id="drop1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><b><u>Correlate</u></b> PPE activity and Income statement account activity</div>
+                          <div class="patchHit" id="patch1">1. Existence <br> 2. Completeness <br> 3. Rights & Obligations  <br> 4. Valuation <br> 5. Presentation & Disclosure</div>
+                       </div>
+             </div>
+            </div> 
+            
+             <div style="margin-left:380px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><b><u>Analyze</u></b> depreciation expense as a percentage of gross cost of PPE </div>
+                          <div class="patchHit" id="patch2" style="margin-top:-165px;">1. Completeness <br> 2. Valuation</div>
+                       </div>
+              </div>
+            </div>
+            
+            
+             <div style="margin-left:560px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop3" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><b><u>Inspect and recalculate</u></b> the company's reconciliation of PPE Subledger accounts and the GL</div>
+                          <div class="patchHit" id="patch3" style="margin-top:-148px;">1. Rights & Obligations <br> 2. Valuation   <br> 3. Presentation & 
+    Disclosure</div>
+                       </div>
+               </div>
+            </div>
+            
+            
+            
+            <div style="margin-left:740px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop4" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><b><u>Inspect</u></b> source documentation evidencing the authorization and purchase of the asset</div>
+                       <div class="patchHit" id="patch4" style="margin-top:-148px;">1. Valuation <br> 2. Presentation & Disclosure</div>
+                       </div>
+               </div>
+            </div>
+            
+            
+            
+             <div style="margin-left:920px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop5" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><b><u>Inspect</u></b> the Repairs & Maintenance Accounts for items that were expensed but should have been capitalized</div>
+                          <div class="patchHit" id="patch5" style="margin-top:-118px;">1. Existence <br> 2. Valuation</div>
+                       </div>
+               </div>
+            </div>
+            
+            
+            <div style="margin-left:930px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop6" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts">Physical <b><u>observation</u></b> of assets</div>
+                          <div class="patchHit" id="patch6" style="margin-top:-118px;">1. Existence <br> 2. Completeness <br> 3. Valuation</div>
+                       </div>
+               </div>
+            </div>
+            
+      </div>
+        
+      
+        
+        
+        <div class="backPatch">
+            <div class="containerBottomT">
+              <div id="dummyLoader"></div>
+              <div id="LogoRotator" class="varySpeed"></div>
+            </div>
+            <div class="timeC runner_time" id="time">10:00</div>
+            <div class="vertical-line" style="height: 50px;"></div>
+            <div class="containerBottomHeading" style="margin-left:10px;" id="fileheading">PP&E</div> 
+            <div class="containerBottom buttonCT"  id="resetB" style="margin-left:1020px;">Next</div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/main.js"	></script>
+</body>
+</html>

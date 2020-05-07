@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Flowchart 02</title>
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body class="container" id="inits">
+
+
+<div class="contentArea" id="popVisible" >
+    <div class="popPatch"></div>
+  <div class="outerLayer">
+    <div class="instruct">
+        <div class="penicon"></div>
+        <div><b>Objective:</b></div>
+    </div>
+    
+    <div class="instruct">Update the flowchart of the significant class of transactions (SCOT) to include what can go wrongs for PP&E additions.</div>
+    <div class="instruct"><div class="penicon"></div><b>Time:</b></div>	
+    <div class="instruct">15 minutes</div>
+    <div class="instruct"><div class="penicon"></div><b>Instructions:</b></div>	
+    <div class="instruct">1. As instructed by your senior, map the PP&E WCGWs listed below to your flowchart.</div>
+    <div class="instruct">2. Work in pairs again.</div>
+    <div class="instruct"><div class="penicon"></div><b>WCGW listing:</b></div>
+    <div class="instruct">SE PP&E WCGW 1: The Classification of an Asset Purchase is Incorrect (i.e. operating or capital).
+        <br>SE PP&E WCGW 2: The GL Coding of an Asset Purchase is Incorrect / Not Performed.
+        <br>SE PP&E WCGW 3: A Fraudulent or Duplicate Vendor is Created in SAP.
+        <br>SE PP&E WCGW 4: Assets are Purchased without Proper Approval / Supporting Documentation.
+        <br>SE PP&E WCGW 5: Fictitious / Incorrect Assets are Recorded. 
+        <br>SE PP&E WCGW 6: Assets are recorded in the incorrect period. 
+        <br>SE PP&E WCGW 7: Assets are recorded incorrectly in the GL.
+        <br>SE PP&E WCGW 8: The PP&E Subledger does not agree to the General Ledger.
+    </div>
+    <div class="instruct"><div class="penicon"></div><b>Tips:</b></div>
+    <div class="instruct">The same WCGW can occur in multiple places.</div>
+    <div class="buttonC"  id="letsGo">Let's go</div>
+  </div>
+  
+
+
+<div class="popPatchBelow"></div>
+</div>
+
+
+<div class="bgTint" id="completedID">
+  <div class="completedC"></div>
+</div>
+
+<div class="sideSection" id="sideID" ondragenter="return false" ondragover="return false">
+    <div class="loader">
+      <div id="dummyLoader"></div>
+      <div id="LogoRotator" class="varySpeed"></div>
+    </div>
+<div class="timerS"><span id="time" class="runner_time">15:00</span> </div>
+<div>
+   <div class="boxDragDummyBG">1</div>
+    <div class="boxDrag1"  draggable="true" id="object0" ondragstart="drag_start(event)" ondragend="drag_end(event)">1</div>
+   <div class="boxtext1">SE PP&E WCGW 1: The Classification of an Asset Purchase is Incorrect (i.e. operating or capital)</div>
+</div>
+<div style="margin-top:40px;">
+   <div class="boxDragDummyBG">2</div>
+   <div class="boxDrag2" draggable="true" id="object1" ondragstart="drag_start(event)" ondragend="drag_end(event)">2</div>
+   <div class="boxtext2">SE PP&E WCGW 2: The GL Coding of an Asset Purchase is Incorrect / Not Performed</div>
+</div>
+<div style="margin-top:80px;">
+   <div class="boxDragDummyBG">3</div>
+   <div class="boxDrag2" draggable="true" id="object2" ondragstart="drag_start(event)" ondragend="drag_end(event)">3</div>
+   <div class="boxtext2">SE PP&E WCGW 3: A Fraudulent or Duplicate Vendor is Created in SAP.</div>
+</div>
+
+<div style="margin-top:120px;">
+   <div class="boxDragDummyBG" id="track4">4</div>
+   <div class="boxDrag2" draggable="true" id="object3" ondragstart="drag_start(event)" ondragend="drag_end(event)">4</div>
+   <div class="boxDrag2" draggable="true" id="object4" ondragstart="drag_start(event)" ondragend="drag_end(event)">4</div>
+   <div class="boxtext2">SE PP&E WCGW 4: Assets are Purchased without Proper Approval/Supporting Documentation.</div>
+</div>
+
+<div style="margin-top:160px;">
+   <div class="boxDragDummyBG">5</div>
+   <div class="boxDrag2" draggable="true" id="object5" ondragstart="drag_start(event)" ondragend="drag_end(event)">5</div>
+   <div class="boxtext2">SE PP&E WCGW 5: Fictitious / Incorrect Assets are Recorded.</div>
+</div>
+
+<div style="margin-top:200px;">
+   <div class="boxDragDummyBG">6</div>
+   <div class="boxDrag2" draggable="true" id="object6" ondragstart="drag_start(event)" ondragend="drag_end(event)">6</div>
+   <div class="boxtext2">SE PP&E WCGW 6: Assets are recorded in the incorrect period.</div>
+</div>
+
+<div style="margin-top:240px;">
+   <div class="boxDragDummyBG">7</div>
+   <div class="boxDrag2" draggable="true" id="object7" ondragstart="drag_start(event)" ondragend="drag_end(event)">7</div>
+   <div class="boxtext2">SE PP&E WCGW 7: Assets are recorded incorrectly in the GL.</div>
+</div>
+
+<div style="margin-top:280px;">
+   <div class="boxDragDummyBG">8</div>
+   <div class="boxDrag2" draggable="true" id="object8" ondragstart="drag_start(event)" ondragend="drag_end(event)">8</div>
+   <div class="boxtext2">SE PP&E WCGW 8: The PP&E Subledger does not agree to the General Ledger.</div>
+</div>
+
+
+</div>
+
+
+<div class="topSpace"></div>
+<div class="boxDrop1" id="drop0" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+<div style="margin-top:-20px; position:absolute;">    
+     <div class="wrongID" id="w0"></div>
+     <div class="answerID" id="a0"></div>
+</div>
+<div class="SpaceGap2"></div>
+<div class="boxDrop1" id="drop1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+<div style="margin-top:-20px; position:absolute;">    
+     <div class="wrongID" id="w1"></div>
+     <div class="answerID" id="a1"></div>
+</div>
+<div class="SpaceGap3"></div>
+<div class="boxDrop1" id="drop2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+<div style="margin-top:-20px; position:absolute;">    
+     <div class="wrongID" id="w2"></div>
+     <div class="answerID" id="a2"></div>
+</div>
+<div class="SpaceGap4"></div>
+<div class="boxDrop2" id="drop3" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+<div style="margin-left:90px; margin-top:-20px; position:absolute;">    
+     <div class="wrongID" id="w3"></div>
+     <div class="answerID" id="a3"></div>
+</div>
+<div class="SpaceGap5"></div>
+
+  <div class="boxDrop3" id="drop4" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+  <div style="margin-left:260px;margin-top:5px; position:absolute;">    
+     <div class="wrongID" id="w4"></div>
+     <div class="answerID" id="a4"></div>
+  </div>
+      <div class="boxDrop3 boxDrop4" id="drop5" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+      <div style="margin-left:948px;margin-top:-25px; position:absolute;">    
+         <div class="wrongID" id="w5"></div>
+         <div class="answerID" id="a5"></div>
+     </div>
+      <div class="boxDrop3 boxDrop5" id="drop6" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+     <div style="margin-left:1060px;margin-top:-25px; position:absolute;">    
+         <div class="wrongID" id="w6"></div>
+         <div class="answerID" id="a6"></div>
+     </div>
+     <div class="boxDrop3 boxDrop6" id="drop7" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+       <div style="margin-left:1093px;margin-top:-25px; position:absolute;">    
+         <div class="wrongID" id="w7"></div>
+         <div class="answerID" id="a7"></div>
+     </div>
+  </div>
+  
+
+<div class="SpaceGap6"></div>  
+<div class="boxDrop7" id="drop8" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+     <div style="margin-left:827px;margin-top:-3px; position:absolute;">    
+         <div class="wrongID" id="w8"></div>
+         <div class="answerID" id="a8"></div>
+     </div>
+
+<div class="submitBtn" id="submitB">Submit</div>
+
+
+<script type="text/javascript" src="js/main.js"	></script>
+</body>
+</html>

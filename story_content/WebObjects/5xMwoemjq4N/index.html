@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="firefox">
+    <meta name="viewport" content="width=1200">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<title>ILP</title>
+
+<!-- Bootstrap -->
+<link href="css/style.css" rel="stylesheet">
+
+
+<style type="text/css">
+
+
+#LogoRotator { z-index: 99; width: 40px; height: 40px; border-radius: 50%; border: 1px solid transparent; border-top-color: #F04C3E; animation: spin 2s linear infinite;  }
+	#LogoRotator:before { content: ""; position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; border-radius: 50%; border: 1px solid transparent; border-top-color: #FFE600; }
+	#LogoRotator:after { content: ""; position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; border-radius: 50%; border: 1px solid transparent; border-top-color: #F04C3E; }
+	@keyframes spin { 100% { transform: rotate(360deg); } }
+	
+
+	#LogoRotator.varySpeed:before { animation: spin 3s linear infinite; }
+	#LogoRotator.varySpeed:after { animation: spin 1.5s linear infinite; }
+   
+  
+	
+</style>
+</head>
+<body>
+
+<div id="closeBtn">X</div>
+
+
+<div id="container">
+	<div id="header">
+    	<div class="uk_left">
+        	<div class="containerBottomT">
+              <div id="dummyLoader"></div>
+              <div id="LogoRotator" class="varySpeed"></div>
+            </div>
+            <div class="timeC runner_time" id="time">20:00</div>
+         </div>
+        <div class="uk_center" style="font-weight:bold;position:absolute; margin-top:20px; text-align:left;margin-left:150px;" id="headingBucket">Cash & Cash Equivalents</div>
+        <div class="uk_right">
+        <a href="#">
+        <!--<div id="nextBtn" class="btn">Next</div>-->
+        </a><!--end of timer-->   </div>
+    </div><!--end of header-->
+    
+    
+     <div class="uk_but_row">
+        	<div class="uk_bt_1"></div>
+            <div class="uk_bt_2"></div>
+            <div class="submitBtn" id="submitID">Submit</div>
+            <div class="submitBtn" id="retryID">Retry</div>
+            <div class="submitBtn" id="nextID">Next</div>
+
+     </div>
+     
+     <div id="popDetailCompleted">
+        <div class="blackPatch"></div>
+        <div class="popupImgCompleted"></div>
+    </div>
+    
+    <div id="instructionLast">
+        <i>Click <b>Close</b> on the right corner of the activity.</i>
+    </div>
+    
+     <div id="poptimeUp">
+        <div class="blackPatch"></div>
+        <div class="popupImgTimeup"></div>
+    </div>
+    
+    
+    
+    <!--start of container-->
+    <div id="cont_inner">
+    	<div class="uk_col-6">
+        	<div class="box1">
+            	<div class="small"><span class="uk_inner">1</span></div>
+                <div class="tap"></div>
+                <div id="water" style="margin-top:30px;">
+					<div class="drop blueO dw1 dw1_1 drop_UKOA" id="waterMark1" class="objects" draggable="false"></div>
+                    <div class="drop blueO drop_UKOA" id="object1" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+					<div class="drop blueO drop_UKOA" id="object2" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+					<div class="drop blueO drop_UKOA" id="object3" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+				</div>
+                <div class="text_box noselect">
+                	<p><b>Inspection</b> of bank reconciliations and bank statements</p>
+                </div>                                            
+            </div><!--end of box1-->
+            <div class="box1" style="margin-left:100px;" >
+            	<div class="small"><span class="uk_inner">2</span></div>
+                <div class="tap"></div>
+                <div id="water1" style="margin-top:30px;">
+					<div class="drop blueO dw1 dw1_1 drop_UKO" id="waterMark2" class="objects" draggable="false"></div>
+                    <div class="drop blueO drop_UKO" id="object4" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+					<div class="drop blueO drop_UKO" id="object5" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+					<div class="drop blueO drop_UKO" id="object6" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+					<div class="drop blueO drop_UKO" id="object7" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+					<div class="drop blueO drop_UKO " id="object8" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                </div>
+                <div class="text_box noselect">
+                	<p><b>Confirm</b> balances with bank</p>
+                </div>                                             
+            </div><!--end of box1-->
+            <div class="box1">
+            	<div class="small"><span class="uk_inner">3</span></div>
+                <div class="tap"></div> 
+                <div id="water2" style="margin-top:30px;">
+					<div class="drop blueO dw1 dw1_1" id="waterMark3" class="objects" draggable="false"></div>
+                    <div class="drop blueO" id="object9" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+					<div class="drop blueO" id="object10" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                </div>
+                <div class="text_box noselect">
+                	<p><b>Recalculate</b> bank reconciliations</p>
+                </div>                                            
+             </div><!--end of box1-->
+             <div class="box1" style="margin-left:100px;">
+            	<div class="small"><span class="uk_inner">4</span></div>
+                <div class="tap"></div> 
+                <div id="water3" style="margin-top:30px;">
+					<div class="drop blueO dw1 dw1_1" id="waterMark4" class="objects" draggable="false"></div>
+                    <div  class="drop blueO" id="object11" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+					<div  class="drop blueO" id="object12" class="objects" draggable="true" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                </div> 
+                <div class="text_box noselect">
+                	<p><b>Inspection</b> of bank statements and disbursements/receipts register and perform cash cutoff procedures</p>
+                </div>                                           
+             </div><!--end of box1-->
+             
+        </div><!---uk-col-6-->
+        <div class="uk_col-6">
+  
+        	<div class="row">
+			
+        	 <div class="buck1" id="drop_zone1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				 <div class="box_tick" id="test">
+				 	 <div class="boxTick1" id="t11">1</div>
+					 <div class="boxTick1" id="t12">2</div>
+					 <div class="boxTick1" id="t13">3</div>
+					 <div class="boxTick1" id="t14">4</div>
+				 </div>
+				 <div id="g1"></div>
+                 <div id="g2"></div>
+                 <div id="g3"></div>
+                 <div id="g4"></div>
+                 <div id="ginviButton"></div>
+			 </div>
+				
+             <div class="buck2" id="drop_zone2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				 <div class="box_tick">
+				 	 <div class="boxTick1" id="t21">1</div>
+					 <div class="boxTick1" id="t22">2</div>
+					 <div class="boxTick1" id="t23">3</div>
+					 <div class="boxTick1" id="t24">4</div>
+				 </div>
+				 <div id="p1"></div>
+                 <div id="p2"></div>
+                 <div id="p3"></div>
+                 <div id="p4"></div>
+                 <div id="pinviButton"></div>
+			 </div>
+            </div><!--end of row--->
+            <div class="uk-row">
+             <div class="buck3" id="drop_zone3" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				<div class="box_tick">
+				 	 <div class="boxTick1" id="t31">1</div>
+					 <div class="boxTick1" id="t32">2</div>
+					 <div class="boxTick1" id="t33">3</div>
+					 <div class="boxTick1" id="t34">4</div>
+				 </div>
+				  <div id="y1"></div>
+                  <div id="y2"></div>
+                  <div id="y3"></div>
+                  <div id="y4"></div>
+                  <div id="yinviButton"></div>
+			 </div>
+             <div class="buck4" id="drop_zone4" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				<div class="box_tick">
+				 	 <div class="boxTick1" id="t41">1</div>
+					 <div class="boxTick1" id="t42">2</div>
+					 <div class="boxTick1" id="t43">3</div>
+					 <div class="boxTick1" id="t44">4</div>
+				 </div>
+				  <div id="b1"></div>
+                  <div id="b2"></div>
+                  <div id="b3"></div>
+                  <div id="b4"></div>
+                  <div id="binviButton"></div>
+			</div>
+             <div class="buck5" id="drop_zone5" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				<div class="box_tick glass">
+				 	 <div class="boxTick1" id="t51">1</div>
+					 <div class="boxTick1" id="t52">2</div>
+					 <div class="boxTick1" id="t53">3</div>
+					 <div class="boxTick1" id="t54">4</div>
+				 </div>
+				  <div id="r1"></div>
+                  <div id="r2"></div>
+                  <div id="r3"></div>
+                  <div id="r4"></div>
+                  <div id="rinviButton"></div>
+			 </div>
+            </div>
+            
+        </div><!---uk-col-6-->
+       
+   
+    </div><!--end of cont_inner-->
+         
+    
+    
+    
+    
+    
+    
+    
+    
+     <!--start of container-->
+    <div id="cont_inner2">
+    	<div class="uk_col-6">
+        	<div class="box1">
+            	<div class="small"><span class="uk_inner">1</span></div>
+                <div class="tap"></div>
+                <div id="water" style="margin-top:-50px;">
+					<div class="drop blue dw1 dw1_1 drop_UK1" id="waterMarkT1" class="objects" draggable="false"></div>
+                    <div class="drop blue drop_UK1" id="objectT1" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+					<div class="drop blue drop_UK1" id="objectT2" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+					<div class="drop blue drop_UK1" id="objectT3" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+                    <div class="drop blue drop_UK1" id="objectT4" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+                    <div class="drop blue drop_UK1" id="objectT5" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+					
+                </div>
+                <div class="text_box noselect" >
+                	<p><b>Inquire</b> about unusual items in the trade payables subleder.  Obtain supporting documentation to support the inquiry</p>
+                </div>                                            
+             </div><!--end of box1-->
+             <div class="box1" style="margin-left:100px;">
+            	<div class="small"><span class="uk_inner">2</span></div>
+                <div class="tap"></div>
+                <div id="water1" style="margin-top:-50px;">
+					<div class="drop blue dw1 dw1_1 drop_UK" id="waterMarkT2" class="objects" draggable="false"></div>
+                    <div class="drop blue drop_UK" id="objectT6" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+					<div class="drop blue drop_UK" id="objectT7" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+					<div class="drop blue drop_UK " id="objectT8" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+                </div>
+                <div class="text_box noselect" >
+                	<p>Design a<b> substantive analytical procedure</b> based on our expectations of the level of trade receivables at the cutoff date</p>
+                </div>                                             
+             </div><!--end of box1-->
+              	<div class="box1">
+            	<div class="small"><span class="uk_inner">3</span></div>
+                <div class="tap"></div> 
+                <div id="water2" style="margin-top:-50px;">
+					<div class="drop blue dw1 dw1_1" id="waterMarkT3" class="objects" draggable="false"></div>
+                    <div class="drop blue" id="objectT9" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+					<div class="drop blue" id="objectT10" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+                </div>
+                <div class="text_box noselect">
+                	<p>Perform a search for unrecorded trade payables at period end by selecting subsequent disbursements and unmatched invoices and receiving reports and <b> inspecting</b> supporting documentation to ensure they were recorded in the proper period</p>
+                </div>                                            
+             </div><!--end of box1-->
+             <div class="box1" style="margin-left:100px;">
+            	<div class="small"><span class="uk_inner">4</span></div>
+                <div class="tap"></div> 
+                <div id="water3" style="margin-top:-50px;">
+					<div class="drop blue dw1 dw1_1" id="waterMarkT4" class="objects" draggable="false"></div>
+                    <div  class="drop blue" id="objectT11" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+					<div  class="drop blue" id="objectT12" class="objects" draggable="true" ondragstart="drag_startT(event)" ondragend="drag_endT(event)"></div>
+                </div> 
+                <div class="text_box noselect">
+                	<p><b>Recalculate</b> subledger and agree to general ledger</p>
+                </div>                                           
+             </div><!--end of box1-->
+             
+        </div><!---uk-col-6-->
+        <div class="uk_col-6" style="margin-left:-125px;">
+  
+        	<div class="row">
+			
+        	 <div class="buck1T" id="drop_zoneT1" ondragenter="drag_enter(event)" ondrop="drag_dropT(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				 <div class="box_tick" id="test">
+				 	 <div class="boxTick1" id="tT11">1</div>
+					 <div class="boxTick1" id="tT12">2</div>
+					 <div class="boxTick1" id="tT13">3</div>
+					 <div class="boxTick1" id="tT14">4</div>
+				 </div>
+				 <div id="gT1"></div>
+                 <div id="gT2"></div>
+                 <div id="gT3"></div>
+                 <div id="gT4"></div>
+                 <div id="ginviButtonT"></div>
+			 </div>
+				
+             <div class="buck2" id="drop_zoneT2" ondragenter="drag_enter(event)" ondrop="drag_dropT(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				 <div class="box_tick">
+				 	 <div class="boxTick1" id="tT21">1</div>
+					 <div class="boxTick1" id="tT22">2</div>
+					 <div class="boxTick1" id="tT23">3</div>
+					 <div class="boxTick1" id="tT24">4</div>
+				 </div>
+				 <div id="pT1"></div>
+                 <div id="pT2"></div>
+                 <div id="pT3"></div>
+                 <div id="pT4"></div>
+                 <div id="pinviButtonT"></div>
+			 </div>
+            </div><!--end of row--->
+            <div class="uk-rowT">
+             <div class="buck3" id="drop_zoneT3" ondragenter="drag_enter(event)" ondrop="drag_dropT(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				<div class="box_tick">
+				 	 <div class="boxTick1" id="tT31">1</div>
+					 <div class="boxTick1" id="tT32">2</div>
+					 <div class="boxTick1" id="tT33">3</div>
+					 <div class="boxTick1" id="tT34">4</div>
+				 </div>
+				  <div id="yT1"></div>
+                  <div id="yT2"></div>
+                  <div id="yT3"></div>
+                  <div id="yT4"></div>
+                  <div id="yinviButtonT"></div>
+			 </div>
+             <div class="buck4" id="drop_zoneT4" ondragenter="drag_enter(event)" ondrop="drag_dropT(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				<div class="box_tick">
+				 	 <div class="boxTick1" id="tT41">1</div>
+					 <div class="boxTick1" id="tT42">2</div>
+					 <div class="boxTick1" id="tT43">3</div>
+					 <div class="boxTick1" id="tT44">4</div>
+				 </div>
+				  <div id="bT1"></div>
+                  <div id="bT2"></div>
+                  <div id="bT3"></div>
+                  <div id="bT4"></div>
+                  <div id="binviButtonT"></div>
+			</div>
+             <div class="buck5" id="drop_zoneT5" ondragenter="drag_enter(event)" ondrop="drag_dropT(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				<div class="box_tick glass">
+				 	 <div class="boxTick1" id="tT51">1</div>
+					 <div class="boxTick1" id="tT52">2</div>
+					 <div class="boxTick1" id="tT53">3</div>
+					 <div class="boxTick1" id="tT54">4</div>
+				 </div>
+				  <div id="rT1"></div>
+                  <div id="rT2"></div>
+                  <div id="rT3"></div>
+                  <div id="rT4"></div>
+                  <div id="rinviButtonT"></div>
+			 </div>
+            </div>
+            
+        </div><!---uk-col-6-->
+       
+   
+</div><!--end of cont_inner-->
+    
+    
+    
+
+
+  <!--start of container-->
+    <div id="cont_inner3">
+    	<div class="uk_col-6">
+        	<div class="box1">
+            	<div class="small"><span class="uk_inner">1</span></div>
+                <div class="tap"></div>
+                <div id="water" style="margin-top:-50px;">
+					<div class="drop blue dw1 dw1_1 drop_UK1" id="waterMarkL1" class="objects" draggable="false"></div>
+                    <div class="drop blue drop_UK1" id="objectL1" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+					<div class="drop blue drop_UK1" id="objectL2" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+					<div class="drop blue drop_UK1" id="objectL3" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+                </div>
+                <div class="text_box noselect">
+                	<p>Design <b>analytical procedures </b>using disaggregated data (e.g., by month, by product line, by geographical area, by segment)</p>
+                </div>                                            
+             </div><!--end of box1-->
+             <div class="box1" style="margin-left:100px;">
+            	<div class="small"><span class="uk_inner">2</span></div>
+                <div class="tap"></div>
+                <div id="water1" style="margin-top:-50px;">
+					<div class="drop blue dw1 dw1_1 drop_UK" id="waterMarkL2" class="objects" draggable="false"></div>
+                    <div class="drop blue drop_UK" id="objectL4" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+					<div class="drop blue drop_UK" id="objectL5" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+					<div class="drop blue drop_UK " id="objectL6" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+                </div>
+                <div class="text_box noselect">
+                	<p>Analyze and investigate the relationship between revenue, receivables and cash by running the<b> Correlation</b> (3-way) report in EAGLe for the selected revenue, accounts receivable and cash accounts</p>
+                </div>                                             
+             </div><!--end of box1-->
+              	<div class="box1">
+            	<div class="small"><span class="uk_inner">3</span></div>
+                <div class="tap"></div> 
+                <div id="water2" style="margin-top:-50px;">
+					<div class="drop blue dw1 dw1_1" id="waterMarkL3" class="objects" draggable="false"></div>
+                    <div class="drop blue" id="objectL7" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+					<div class="drop blue" id="objectL8" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+                    <div class="drop blue" id="objectL9" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+                </div>
+                <div class="text_box noselect">
+                	<p><b>Inquiry</b> of sales and marketing personnel for any unusual transactions or similar items</p>
+                </div>                                            
+             </div><!--end of box1-->
+             <div class="box1" style="margin-left:100px;">
+            	<div class="small"><span class="uk_inner">4</span></div>
+                <div class="tap"></div> 
+                <div id="water3" style="margin-top:-50px;">
+					<div class="drop blue dw1 dw1_1" id="waterMarkL4" class="objects" draggable="false"></div>
+                    <div  class="drop blue" id="objectL10" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+                    <div  class="drop blue" id="objectL11" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+					<div  class="drop blue" id="objectL12" class="objects" draggable="true" ondragstart="drag_startL(event)" ondragend="drag_endL(event)"></div>
+                </div> 
+                <div class="text_box noselect">
+                	<p>If substantive <b>analytical 
+procedures</b> did not satisfy our risk assessment, perform tests of transactions based on the combined risk assessment, when required, through inspection of sales agreements and the recognition of revenue for selections.</p>
+                </div>                                           
+             </div><!--end of box1-->
+             
+        </div><!---uk-col-6-->
+        <div class="uk_col-6" style="margin-left:-100px;">
+  
+        	<div class="row">
+			
+        	 <div class="buck1L" id="drop_zoneL1" ondragenter="drag_enter(event)" ondrop="drag_dropL(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				 <div class="box_tick" id="test">
+				 	 <div class="boxTick1" id="tL11">1</div>
+					 <div class="boxTick1" id="tL12">2</div>
+					 <div class="boxTick1" id="tL13">3</div>
+					 <div class="boxTick1" id="tL14">4</div>
+				 </div>
+				 <div id="gL1"></div>
+                 <div id="gL2"></div>
+                 <div id="gL3"></div>
+                 <div id="gL4"></div>
+                 <div id="ginviButtonL"></div>
+			 </div>
+				
+             <div class="buck2" id="drop_zoneL2" ondragenter="drag_enter(event)" ondrop="drag_dropL(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				 <div class="box_tick">
+				 	 <div class="boxTick1" id="tL21">1</div>
+					 <div class="boxTick1" id="tL22">2</div>
+					 <div class="boxTick1" id="tL23">3</div>
+					 <div class="boxTick1" id="tL24">4</div>
+				 </div>
+				 <div id="pL1"></div>
+                 <div id="pL2"></div>
+                 <div id="pL3"></div>
+                 <div id="pL4"></div>
+                 <div id="pinviButtonL"></div>
+			 </div>
+            </div><!--end of row--->
+            <div class="uk-row" style="margin-left:225px;">
+             <div class="buckL3" id="drop_zoneL3" ondragenter="drag_enter(event)" ondrop="drag_dropL(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				<div class="box_tick">
+				 	 <div class="boxTick1" id="tL31">1</div>
+					 <div class="boxTick1" id="tL32">2</div>
+					 <div class="boxTick1" id="tL33">3</div>
+					 <div class="boxTick1" id="tL34">4</div>
+				 </div>
+				  <div id="yL1"></div>
+                  <div id="yL2"></div>
+                  <div id="yL3"></div>
+                  <div id="yL4"></div>
+                  <div id="yinviButtonL"></div>
+			 </div>
+             <div class="buckL4" style="margin-left:80px;" id="drop_zoneL4" ondragenter="drag_enter(event)" ondrop="drag_dropL(event)" ondragover="return false" ondragleave="drag_leave(event)">
+				<div class="box_tick">
+				 	 <div class="boxTick1" id="tL41">1</div>
+					 <div class="boxTick1" id="tL42">2</div>
+					 <div class="boxTick1" id="tL43">3</div>
+					 <div class="boxTick1" id="tL44">4</div>
+				 </div>
+				  <div id="bL1"></div>
+                  <div id="bL2"></div>
+                  <div id="bL3"></div>
+                  <div id="bL4"></div>
+                  <div id="binviButtonL"></div>
+			</div>
+            
+            </div>
+            
+        </div><!---uk-col-6-->
+       
+   
+</div><!--end of cont_inner-->
+    
+    
+    
+    
+    
+    
+    
+
+
+
+<!--- custom popup-->
+
+ <div id="openModal" class="modalDialog">
+            <div>
+                <div class="popstart">
+                    <div class="Uk_head_0">Instructions:</div>
+                    <div class="Uk_head_1">Time: 20 minutes</div>
+                    <div class="popup_full">
+                        <p>For each procedure presented, map the assertions to each risk. One risk might be matched withmore than one assertion. You may also use an assertion more than once. Once you have matched all of the risks and assertions, you will be prompted to begin mapping the next account. You have twenty minutes to complete this activity. </p>
+                    </div>
+                    <div class="start_but">
+                        <a href="#" id="myHref" class="myButton" style="margin-top:50px;">Let's go</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!---popup for correct-->
+        <div id="correct" class="correctpopup">
+            <div>
+                <div class="Uk_corr_0">Correct</div>
+                <div class="popup_correct">
+                    <p>That response is correct!</p>
+                </div>
+                <div class="correct_bnt">
+                    <a href="#" id="myCorrect" class="myButtonRed">Continue</a>
+                </div>
+            </div>
+        </div>
+        <!---popup for try-->
+        <div id="try" class="correctpopup">
+            <div>
+                <div class="Uk_corr_0">Try again</div>
+                <div class="popup_correct"><br>
+                    <p>Your responses are incorrect. <br><br>  Please try again.</p>
+                </div>
+                <div class="correct_bnt">
+                    <a href="#" id="myIncorrect" class="myButtonRed">Continue</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="popExit" class="finalExit">
+            <div class="finalImage">
+               
+                <div class="popup_correctExit">
+                    <p>Do you really want to quit this activity?</p>
+                </div>
+                <div class="correct_bntExit">
+                    <a href="#" id="NoExit" class="myButton">No</a>
+                    <a href="#" id="yesExit" class="myButton">Yes</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!---popup for Incorrect, go next-->
+        <!--<div id="" class="correctpopup">
+            <div>
+                <div class="Uk_corr_1">Incorrect</div>
+                <div class="popup_correct">
+                    <p>That response is incorrect!</p><p>Click continue, and then click on each bucket to view the correct answers.</p>
+                   
+                </div>
+                <div class="correct_bnt">
+                    <a href="#" id="mytryIncorrect" class="myButton">Continue</a>
+                </div>
+            </div>
+        </div>-->
+        <!---popup for goodjob-->
+        <div id="goodjob" class="goodjob">
+            <div>
+
+            </div>
+        </div>
+        <!---popup for tryagain-->
+        <div id="tryagain" class="tryagain">
+            <div>
+
+            </div>
+        </div>
+        
+          <!---popup for tryagain-->
+        <div id="tryIncorrect" class="try_incorrect">
+            <div>
+				<div class="Uk_incorrect_0_1">Incorrect</div>
+                <div class="popup_correct_try"> &nbsp; <br>
+                    <p>That response is incorrect!</p><p>Click continue, and then click on each bucket to <br> view the correct answers.</p>
+                </div>
+                <div class="correct_bnt">
+                    <a href="#" id="mytryIncorrect" class="myButtonRed" style="margin-top:0px;">Continue</a>
+                </div>
+            </div>
+        </div>
+        
+        
+      
+
+        <!--popup of bukets--->
+
+        <!---popup for UK_buk_1-->
+         <!---<div id="UK_buk_P" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseP" title="Close" class="close"></a>
+				<div class="Uk_Lbx">
+                <img src="assest/image/BUk_pink.png" class="imag_buk_1" alt="Buk_pink"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p>Design <b> analytical procedures</b> using disaggregated  data (e.g., by month, by product line, by geographical area, by segment)</p>
+                <p><b>Inquiry</b> of sales and marketing personnel for any  unusual transactions or similar items</p>
+                <p>IAnalyze and investigate the relationship between  revenue, receivables and cash by running the <b>Correlation</b> (3-way) report in EAGLe for the selected revenue, accounts receivable and cash  accounts. </p>
+                </div>
+            </div>
+        </div>-->
+
+
+
+<!--arun added popupds-->
+
+
+        <!--popup of bukets--->
+
+        <!---popup for UK_buk_R-->
+       <div id="UK_buk_R" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseR" title="Close" class="close"></a>
+				<div class="Uk_Lbx_r">
+                <img src="assest/image/B_Red.png" class="imag_buk_1" alt="B_Red"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Confirm</b> balances with bank</p>
+          
+                </div>
+            </div>
+        </div>
+        
+                <!---popup for UK_buk_G-->
+     <div id="UK_buk_G" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseG" title="Close" class="close"></a>
+				<div class="Uk_Lbx_g">
+                <img src="assest/image/B_green.png" class="imag_buk_1" alt="B_green"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Inspection </b> of bank reconciliations and bank statements</p>
+                <p><b>Confirm </b> balances with bank</p>
+                <p><b>Recalculate</b> bank reconciliations</p>
+                </div>
+            </div>
+        </div>
+                        <!---popup for UK_buk_P-->
+       <div id="UK_buk_P" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseP" title="Close" class="close"></a>
+				<div class="Uk_Lbx_p">
+                <img src="assest/image/B_pink.png" class="imag_buk_1" alt="Buk_pink"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Inspection </b> of bank reconciliations and bank statements</p>
+                <p><b>Recalculate </b> bank reconciliations</p>
+                <p><b>Inspection</b> of bank statements and disbursements/receipts register and perform cash cutoff procedures</p>
+                </div>
+            </div>
+        </div>
+                        <!---popup for UK_buk_B-->
+      <div id="UK_buk_B" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseB" title="Close" class="close"></a>
+				<div class="Uk_Lbx_b">
+                <img src="assest/image/B_Blue.png" class="imag_buk_1" alt="B_blue"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Inspection </b> of bank reconciliations and bank statements</p>
+                <p><b>Confirm</b> balances with bank</p>
+                </div>
+            </div>
+        </div>
+                        <!---popup for UK_buk_Y-->
+       <div id="UK_buk_Y" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseY" title="Close" class="close"></a>
+				<div class="Uk_Lbx_y">
+                <img src="assest/image/B_yellow.png" class="imag_buk_1" alt="B_yellow"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Confirm</b> balances with bank</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+<!---popup for second level-->    
+        
+ <div id="UK_buk_TG" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseTG" title="Close" class="close"></a>
+				<div class="Uk_Lbx_g">
+                <img src="assest/image/bucket_T1.png" class="imag_buk_1" alt="B_green"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Inquire</b> about unusual items in the trade payables subleder. Obtain supporting documentation to support the inquiry</p>
+                <p>Design a <b> substantive analytical procedure </b> based on our expectations of the level of trade receivables at the cutoff date</p>
+                <p><b>Recalculate</b> subledger and agree to general ledger</p>
+                </div>
+            </div>
+ </div>
+
+<div id="UK_buk_TP" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseTP" title="Close" class="close"></a>
+				<div class="Uk_Lbx_p">
+                <img src="assest/image/bucket_T2.png" class="imag_buk_1" alt="Buk_pink"/>
+                </div>
+                <div class="Uk_Rbx">
+                <b>Inquire</b> about unusual items in the trade payables subleder. Obtain supporting documentation to support the inquiry</p>
+                <p>Design a <b> substantive analytical procedure </b> based on our expectations of the level of trade receivables at the cutoff date</p>
+                <p>Perform a search for unrecorded trade payables at period end by selecting subsequent disbursements and unmatched invoices and receiving reports and <b>inspecting</b> supporting documentation to ensure they were recorded in the proper period</p><p><b>Recalculate</b> subledger and agree to general ledger</p>
+                </div>
+            </div>
+</div>
+
+<div id="UK_buk_TY" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseTY" title="Close" class="close"></a>
+				<div class="Uk_Lbx_y">
+                <img src="assest/image/bucket_T3.png" class="imag_buk_1" alt="B_yellow"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Inquire</b>  about unusual items in the trade payables subleder. Obtain supporting documentation to support the inquiry</p>
+                <p>Design a <b> substantive analytical procedure </b> based on our expectations of the level of trade receivables at the cutoff date</p>
+                </div>
+            </div>
+</div>
+
+<div id="UK_buk_TB" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseTB" title="Close" class="close"></a>
+				<div class="Uk_Lbx_b">
+                <img src="assest/image/bucket_T4.png" class="imag_buk_1" alt="B_blue"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Inquire</b> about unusual items in the trade payables subleder. Obtain supporting documentation to support the inquiry</p>
+                <p>Perform a search for unrecorded trade payables at period end by selecting subsequent disbursements and unmatched invoices and receiving reports and <b>inspecting</b> supporting documentation to ensure they were recorded in the proper period</p>
+                </div>
+            </div>
+</div>
+
+
+<div id="UK_buk_TR" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseTR" title="Close" class="close"></a>
+				<div class="Uk_Lbx_r">
+                <img src="assest/image/bucket_T5.png" class="imag_buk_1" alt="B_Red"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p><b>Inquire</b> about unusual items in the trade payables subleder. Obtain supporting documentation to support the inquiry</p>
+                </div>
+            </div>
+</div>
+
+<!---End of second level-->
+
+
+
+<!---popup for Third level-->    
+
+ <div id="UK_buk_LG" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseLG" title="Close" class="close"></a>
+				<div class="Uk_Lbx_g">
+                <img src="assest/image/bucket_L1.png" class="imag_buk_1" alt="B_green"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p>Design<b> analytical procedures</b> using disaggregated data (e.g., by month, by product line, by geographical area, by segment)</p>
+                <p>Analyze and investigate the relationship between revenue, receivables and cash by running the<b> Correlation</b> (3-way) report in EAGLe for the selected revenue, accounts receivable and cash accounts</p>
+                <p><b>Inquiry</b> of sales and marketing personnel for any unusual transactions or similar items</p>
+                <p>If substantive<b> analytical procedures </b> did not satisfy our risk assessment, perform tests of transactions based on the combined risk assessment, when required, through inspection of sales agreements and the recognition of revenue for selections</p>
+                </div>
+            </div>
+ </div>
+
+<div id="UK_buk_LP" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseLP" title="Close" class="close"></a>
+				<div class="Uk_Lbx_p">
+                <img src="assest/image/bucket_L2.png" class="imag_buk_1" alt="Buk_pink"/>
+                </div>
+                <div class="Uk_Rbx">
+                <p>Design<b> analytical procedures</b> using disaggregated data (e.g., by month, by product line, by geographical area, by segment)</p>
+                <p>Analyze and investigate the relationship between revenue, receivables and cash by running the<b> Correlation</b> (3-way) report in EAGLe for the selected revenue, accounts receivable and cash accounts</p>
+                <p><b>Inquiry</b> of sales and marketing personnel for any unusual transactions or similar items</p>
+                <p>If substantive<b> analytical procedures </b> did not satisfy our risk assessment, perform tests of transactions based on the combined risk assessment, when required, through inspection of sales agreements and the recognition of revenue for selections</p>
+                </div>
+            </div>
+</div>
+
+<div id="UK_buk_LY" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseLY" title="Close" class="close"></a>
+				<div class="Uk_Lbx_y">
+                <img src="assest/image/bucket_L3.png" class="imag_buk_1" alt="B_yellow"/>
+                </div>
+               <div class="Uk_Rbx">
+                <p>Design<b> analytical procedures</b> using disaggregated data (e.g., by month, by product line, by geographical area, by segment)</p>
+                <p>Analyze and investigate the relationship between revenue, receivables and cash by running the<b> Correlation</b> (3-way) report in EAGLe for the selected revenue, accounts receivable and cash accounts</p>
+                <p><b>Inquiry</b> of sales and marketing personnel for any unusual transactions or similar items</p>
+                <p>If substantive<b> analytical procedures </b> did not satisfy our risk assessment, perform tests of transactions based on the combined risk assessment, when required, through inspection of sales agreements and the recognition of revenue for selections</p>
+                </div>
+            </div>
+</div>
+
+<div id="UK_buk_LB" class="UK_buk_1">
+            <div>
+            	<a href="#close" id="myHrefCloseLB" title="Close" class="close"></a>
+				<div class="Uk_Lbx_b">
+                <img src="assest/image/bucket_L4.png" class="imag_buk_1" alt="B_blue"/>
+                </div>
+                <div class="Uk_Rbx"><p>None</p>
+                </div>
+            </div>
+</div>
+
+
+
+
+
+
+<!---End of Third level-->
+
+</div><!--end of container-->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"	></script>
+</body>
+</html>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

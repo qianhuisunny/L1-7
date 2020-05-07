@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="firefox">
+    <meta name="viewport" content="width=1200">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<title>Control Objective</title>
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="inits" ondragenter="return false" ondragover="return false">
+<div id="container">
+<div class="contentArea " >
+    <div class="timeC"><b></b></div>
+    <div class="instruct"><b>Instructions:</b></div>
+    <div class="instruct">&#9658; &nbsp; Match the control objective and type of control to the control</div>
+    <div class="instruct">&#9658; &nbsp; Work individually to answer the below</div>
+    <div class="instruct"><b>Tip:</b></div>	
+    <div class="instruct">&#9658; &nbsp; You can use the following topic from EY GAM as a resource <br /> <span style="position:absolute; margin-left:28px; margin-top:8px;"><b><i>CONTROLS: Controls over SCOTs and Significant Disclosure Processes Section 1.</i></b></span>
+    <div class="buttonC" onclick="letsGO();">Let's go</div>
+    </div>
+</div>
+
+<div class="secondScreen" id="dragVisible">
+  <div class="headerDiv">
+    <div class="partitionHeadS">Control</div>
+    <div class="partitionHead">Control Objective</div>
+    <div class="partitionHead">Type of Control</div>
+  </div>
+  
+  <div class="headerDivInner">
+    <div class="partitionInnerS" style="margin-top:12px;">For all disbursements, a three way match (invoice, purchase order, goods received note) is performed in the Accounting System prior to payment. Discrepancies, if any, are approved in accordance with the Global Authorization Policy.</div>
+    <div class="partitionInner">
+        <div class="wrongID" id="w01"></div>
+        <div class="answerID" id="a01"></div>
+        <div class="dropAreaDummy"></div>
+        <div class="dropArea" id="drop0" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+    </div>
+    
+     <div class="partitionInner">
+     <div class="dropAreaDummy"></div>
+         <div class="dropArea" id="dropR0" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        <div class="wrongID" id="w02"></div>
+        <div class="answerID" id="a02"></div>
+    </div>
+  </div>
+  
+  
+   <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:12px;">Management reviews and approves Purchase Orders in the Accounting System in accordance with the limits set in the Global Authorization Policy.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w11"></div>
+            <div class="answerID" id="a11"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+             <div class="dropArea" id="dropR1" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+             <div class="dropAreaDummy"></div>
+            <div class="wrongID" id="w12"></div>
+            <div class="answerID" id="a12"></div>
+        </div>
+  </div>
+  
+  
+   <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:20px;">The Accounting System restricts the ability to create, change, or delete vendors and the vendor master file.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w21"></div>
+            <div class="answerID" id="a21"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+         <div class="dropAreaDummy"></div>
+             <div class="dropArea" id="dropR2" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+            <div class="wrongID" id="w22"></div>
+            <div class="answerID" id="a22"></div>
+        </div>
+  </div>
+  
+   <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:5px;">Reconciliations between the bank statements and the Accounting System are reviewed on a monthly basis by the Accounting Manager (or delegate). Any un-reconciled differences (in aggregate for the bank account) greater than 10,000 are investigated and resolved before the end of the following month.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w31"></div>
+            <div class="answerID" id="a31"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop3" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+         <div class="dropAreaDummy"></div>
+             <div class="dropArea" id="dropR3" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+            <div class="wrongID" id="w32"></div>
+            <div class="answerID" id="a32"></div>
+        </div>
+  </div>
+  
+  
+   <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:22px;">Secure locks to prevent the misappropriation of valuable assets.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w41"></div>
+            <div class="answerID" id="a41"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop4" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+         <div class="dropAreaDummy"></div>
+             <div class="dropArea" id="dropR4" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+            <div class="wrongID" id="w42"></div>
+            <div class="answerID" id="a42"></div>
+        </div>
+  </div>
+  
+  
+  <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:12px;">Depreciation is automatically calculated by the property, plant and equipment sub ledger in the Accounting System based on the asset type and life specified.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w51"></div>
+            <div class="answerID" id="a51"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop5" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+         <div class="dropAreaDummy"></div>
+             <div class="dropArea" id="dropR5" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+            <div class="wrongID" id="w52"></div>
+            <div class="answerID" id="a52"></div>
+        </div>
+  </div>
+  
+  <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:12px;">A reconciliation is performed of the amount of consignment stock that was manually counted and recorded to the amounts within third party statements.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w61"></div>
+            <div class="answerID" id="a61"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop6" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+             <div class="dropAreaDummy"></div>
+             <div class="dropArea" id="dropR6" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+            <div class="wrongID" id="w62"></div>
+            <div class="answerID" id="a62"></div>
+        </div>
+  </div>
+  
+  <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:12px;">Month end journal entries are prepared and recorded in the General Ledger with adequate supporting documentation and are approved by a manager (or delegate) in accordance with the Journal Entry Policy.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w71"></div>
+            <div class="answerID" id="a71"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop7" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+         <div class="dropAreaDummy"></div>
+             <div class="dropArea" id="dropR7" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+            <div class="wrongID" id="w72"></div>
+            <div class="answerID" id="a72"></div>
+        </div>
+  </div>
+  
+  
+   <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:22px;">The Accounting System restricts access to enter exchange rates.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w81"></div>
+            <div class="answerID" id="a81"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop8" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+         <div class="dropAreaDummy"></div>
+             <div class="dropArea" id="dropR8" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+            <div class="wrongID" id="w82"></div>
+            <div class="answerID" id="a82"></div>
+        </div>
+  </div>
+  <div id="sample"></div>
+  
+   <div class="headerDivInner">
+        <div class="partitionInnerS" style="margin-top:22px;">The Accounting System automatically calculates sales tax on invoices produced for customers based on rates in the tax master file.</div>
+        <div class="partitionInner">
+            <div class="wrongID" id="w91"></div>
+            <div class="answerID" id="a91"></div>
+            <div class="dropAreaDummy"></div>
+            <div class="dropArea" id="drop9" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+        </div>
+        
+         <div class="partitionInner">
+         <div class="dropAreaDummy"></div>
+             <div class="dropArea" id="dropR9" ondragenter="drag_enter(event)" ondrop="drag_dropR(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+            <div class="wrongID" id="w92"></div>
+            <div class="answerID" id="a92"></div>
+        </div>
+  </div>
+  
+  <div class="controlO" id="controlOLeft">Control Objective</div>
+  <div class="controlO" id="controlORight">Type of Control</div>
+  <div class="lineRedDraw"></div>
+  <div class="lineRedDraw2"></div>
+  <div class="lineRedDraw3"></div>
+  <div class="lineRedDraw4"></div>
+  <div class="lineRedDown"></div>
+  <div class="lineRedDown2"></div>
+  <div class="lineRedDown3"></div>
+  <div class="lineRedDown4"></div>
+  <div style="margin-top:50px;">
+      <div style="margin-left:42px;">
+          <div class="DragdropArea1Dummy">Detect and Correct</div>
+          <div class="DragdropArea1" draggable="true" id="object0" ondragstart="drag_start(event)" ondragend="drag_end(event)">Detect and Correct</div>
+          <div class="DragdropArea1" draggable="true" id="object1" ondragstart="drag_start(event)" ondragend="drag_end(event)">Detect and Correct</div>
+          <div class="DragdropArea1" draggable="true" id="object2" ondragstart="drag_start(event)" ondragend="drag_end(event)">Detect and Correct</div>
+          <div class="DragdropArea1" draggable="true" id="object3" ondragstart="drag_start(event)" ondragend="drag_end(event)">Detect and Correct</div>
+      </div>
+      
+      <div style="margin-left:250px;">
+          <div class="DragdropArea1Dummy">Prevent</div>
+          <div class="DragdropArea2" draggable="true" id="object4" ondragstart="drag_start(event)" ondragend="drag_end(event)">Prevent</div>
+          <div class="DragdropArea2" draggable="true" id="object5" ondragstart="drag_start(event)" ondragend="drag_end(event)">Prevent</div>
+          <div class="DragdropArea2" draggable="true" id="object6" ondragstart="drag_start(event)" ondragend="drag_end(event)">Prevent</div>
+          <div class="DragdropArea2" draggable="true" id="object7" ondragstart="drag_start(event)" ondragend="drag_end(event)">Prevent</div>
+          <div class="DragdropArea2" draggable="true" id="object8" ondragstart="drag_start(event)" ondragend="drag_end(event)">Prevent</div>
+          <div class="DragdropArea2" draggable="true" id="object9" ondragstart="drag_start(event)" ondragend="drag_end(event)">Prevent</div>
+      </div>
+      
+      <div style="margin-left:550px;">
+          <div class="DragdropArea1Dummy">IT-Dependent Manual</div>
+          <div class="DragdropArea3" draggable="true" id="objectR0" ondragstart="drag_startR(event)" ondragend="drag_end(event)">IT-Dependent Manual</div>
+          <div class="DragdropArea3" draggable="true" id="objectR1" ondragstart="drag_startR(event)" ondragend="drag_end(event)">IT-Dependent Manual</div>
+          <div class="DragdropArea3" draggable="true" id="objectR2" ondragstart="drag_startR(event)" ondragend="drag_end(event)">IT-Dependent Manual</div>
+          <div class="DragdropArea3" draggable="true" id="objectR3" ondragstart="drag_startR(event)" ondragend="drag_end(event)">IT-Dependent Manual</div>
+      </div>
+      
+       <div style="margin-left:755px;">
+          <div class="DragdropArea1Dummy">Manual</div>
+          <div class="DragdropArea4" draggable="true" id="objectR4" ondragstart="drag_startR(event)" ondragend="drag_end(event)">Manual</div>
+          <div class="DragdropArea4" draggable="true" id="objectR5" ondragstart="drag_startR(event)" ondragend="drag_end(event)">Manual</div>
+      </div>
+      
+       <div style="margin-left:960px;">
+          <div class="DragdropArea1Dummy">Application</div>
+          <div class="DragdropArea5" draggable="true" id="objectR6" ondragstart="drag_startR(event)" ondragend="drag_end(event)">Application</div>
+          <div class="DragdropArea5" draggable="true" id="objectR7" ondragstart="drag_startR(event)" ondragend="drag_end(event)">Application</div>
+          <div class="DragdropArea5" draggable="true" id="objectR8" ondragstart="drag_startR(event)" ondragend="drag_end(event)">Application</div>
+          <div class="DragdropArea5" draggable="true" id="objectR9" ondragstart="drag_startR(event)" ondragend="drag_end(event)">Application</div>
+      </div>
+  </div>
+  <div class="submitBtn" id="submitB">Submit</div>
+  
+</div>
+
+
+
+
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"	></script>
+</body>
+</html>
